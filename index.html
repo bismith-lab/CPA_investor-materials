@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<title>Courser Park Advisors — Investor Materials</title>
+<style>
+  :root{
+    --ink:#101820;
+    --ink-soft:#2b3540;
+    --paper:#fbfaf7;
+    --paper-dim:#f1efe9;
+    --line:#dcd6c8;
+    --gold:#a9842c;
+    --gold-soft:#cfa75c;
+    --green:#1f3d2e;
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    margin:0;
+    background:var(--paper);
+    color:var(--ink);
+    font-family:'Source Sans 3','Segoe UI',system-ui,sans-serif;
+    -webkit-font-smoothing:antialiased;
+  }
+  @font-face{font-family:'fallback-serif';src:local('Georgia');}
+  h1,h2,.serif{
+    font-family:'Source Serif 4',Georgia,'Times New Roman',serif;
+  }
+
+  /* Header */
+  header{
+    border-bottom:1px solid var(--line);
+    padding:48px 32px 36px;
+    max-width:920px;
+    margin:0 auto;
+  }
+  .firm{
+    display:flex;
+    align-items:baseline;
+    justify-content:space-between;
+    gap:24px;
+    flex-wrap:wrap;
+  }
+  .firm-name{
+    font-size:14px;
+    letter-spacing:0.14em;
+    text-transform:uppercase;
+    color:var(--ink-soft);
+    font-weight:600;
+  }
+  .firm-tag{
+    font-size:12px;
+    letter-spacing:0.08em;
+    color:#8b8470;
+  }
+  h1{
+    margin:22px 0 10px;
+    font-size:clamp(28px,4vw,40px);
+    font-weight:600;
+    line-height:1.15;
+    color:var(--ink);
+  }
+  .subhead{
+    font-size:15.5px;
+    color:var(--ink-soft);
+    line-height:1.6;
+    max-width:60ch;
+  }
+  .updated-note{
+    margin-top:18px;
+    font-size:12.5px;
+    color:#8b8470;
+    border-left:2px solid var(--gold-soft);
+    padding-left:10px;
+  }
+
+  /* Section */
+  main{
+    max-width:920px;
+    margin:0 auto;
+    padding:44px 32px 80px;
+  }
+  .section-label{
+    font-size:12px;
+    letter-spacing:0.14em;
+    text-transform:uppercase;
+    color:#8b8470;
+    margin:0 0 18px;
+    display:flex;
+    align-items:center;
+    gap:10px;
+  }
+  .section-label::after{
+    content:"";
+    flex:1;
+    height:1px;
+    background:var(--line);
+  }
+
+  /* Cards */
+  .grid{
+    display:grid;
+    gap:1px;
+    background:var(--line);
+    border:1px solid var(--line);
+    margin-bottom:52px;
+  }
+  .card{
+    background:var(--paper);
+    padding:22px 24px;
+    display:grid;
+    grid-template-columns:1fr auto;
+    gap:16px;
+    align-items:center;
+    text-decoration:none;
+    color:inherit;
+    transition:background 0.15s ease;
+    position:relative;
+  }
+  .card:hover{ background:var(--paper-dim); }
+  .card:hover .go{ transform:translateX(2px); border-color:var(--gold); }
+  .card-main{ min-width:0; }
+  .card-label{
+    font-size:11px;
+    letter-spacing:0.1em;
+    text-transform:uppercase;
+    color:var(--gold);
+    font-weight:600;
+    margin-bottom:6px;
+  }
+  .card-title{
+    font-family:'Source Serif 4',Georgia,serif;
+    font-size:19px;
+    font-weight:600;
+    color:var(--ink);
+    margin-bottom:4px;
+  }
+  .card-desc{
+    font-size:13.5px;
+    color:var(--ink-soft);
+    line-height:1.5;
+  }
+  .go{
+    width:34px;
+    height:34px;
+    border-radius:50%;
+    border:1px solid var(--line);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    flex-shrink:0;
+    transition:all 0.15s ease;
+    color:var(--ink-soft);
+    font-size:15px;
+    line-height:1;
+  }
+
+  footer{
+    max-width:920px;
+    margin:0 auto;
+    padding:0 32px 60px;
+    font-size:12px;
+    color:#8b8470;
+    line-height:1.7;
+    border-top:1px solid var(--line);
+    padding-top:24px;
+  }
+  footer p{ margin:0 0 8px; max-width:65ch; }
+
+  @media (max-width:520px){
+    header{ padding:36px 20px 28px; }
+    main{ padding:32px 20px 60px; }
+    footer{ padding:0 20px 48px; }
+    .card{ grid-template-columns:1fr; }
+    .go{ display:none; }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="firm">
+    <span class="firm-name">Courser Park Advisors LLP</span>
+    <span class="firm-tag">SEBI Reg. INP000008303</span>
+  </div>
+  <h1>Investor Materials</h1>
+  <p class="subhead">Strategy overview, current portfolio theses, and the latest performance report for the GARP equity strategy.</p>
+  <p class="updated-note">This page is updated in place — bookmark it rather than the individual files below.</p>
+</header>
+
+<main>
+
+  <p class="section-label">Strategy &amp; Performance</p>
+  <div class="grid">
+    <a class="card" href="pdfs/CPA_June_2026_Deck.pdf" target="_blank" rel="noopener">
+      <div class="card-main">
+        <div class="card-label">Strategy Overview</div>
+        <div class="card-title">GARP Strategy Deck — June 2026</div>
+        <div class="card-desc">Investment philosophy, process, and portfolio construction for the Growth at a Reasonable Price strategy.</div>
+      </div>
+      <span class="go">↗</span>
+    </a>
+    <a class="card" href="pdfs/Quarterly_Report_March_2026.pdf" target="_blank" rel="noopener">
+      <div class="card-main">
+        <div class="card-label">Performance Report</div>
+        <div class="card-title">Quarterly Report — March 2026</div>
+        <div class="card-desc">Portfolio performance, attribution, and commentary for the quarter ended March 2026.</div>
+      </div>
+      <span class="go">↗</span>
+    </a>
+  </div>
+
+  <p class="section-label">Portfolio Theses</p>
+  <div class="grid">
+    <a class="card" href="pdfs/Titan_Deck.pdf" target="_blank" rel="noopener">
+      <div class="card-main">
+        <div class="card-label">Consumer / Jewellery</div>
+        <div class="card-title">Titan Company</div>
+        <div class="card-desc">Investment thesis and business overview.</div>
+      </div>
+      <span class="go">↗</span>
+    </a>
+    <a class="card" href="pdfs/TVS_Motor_Deck.pdf" target="_blank" rel="noopener">
+      <div class="card-main">
+        <div class="card-label">Automobiles</div>
+        <div class="card-title">TVS Motor Company</div>
+        <div class="card-desc">Investment thesis and business overview.</div>
+      </div>
+      <span class="go">↗</span>
+    </a>
+    <a class="card" href="pdfs/Navin_Fluorine_Deck.pdf" target="_blank" rel="noopener">
+      <div class="card-main">
+        <div class="card-label">Specialty Chemicals</div>
+        <div class="card-title">Navin Fluorine International</div>
+        <div class="card-desc">Investment thesis and business overview.</div>
+      </div>
+      <span class="go">↗</span>
+    </a>
+    <a class="card" href="pdfs/Acutaas_Deck.pdf" target="_blank" rel="noopener">
+      <div class="card-main">
+        <div class="card-label">Specialty Chemicals</div>
+        <div class="card-title">Acutaas Chemicals</div>
+        <div class="card-desc">Investment thesis and business overview.</div>
+      </div>
+      <span class="go">↗</span>
+    </a>
+  </div>
+
+</main>
+
+<footer>
+  <p>This material is shared on a confidential basis for the sole use of the intended recipient and may not be redistributed. It does not constitute investment advice or an offer to invest. Past performance is not indicative of future results.</p>
+  <p>Courser Park Advisors LLP (operating as RW Investment Advisors / RW Advisors) is registered with SEBI as a Portfolio Management Services provider, registration no. INP000008303.</p>
+</footer>
+
+</body>
+</html>
