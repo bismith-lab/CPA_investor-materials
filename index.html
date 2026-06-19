@@ -7,253 +7,295 @@
 <title>Courser Park Advisors — Investor Materials</title>
 <style>
   :root{
-    --ink:#101820;
-    --ink-soft:#2b3540;
-    --paper:#fbfaf7;
-    --paper-dim:#f1efe9;
-    --line:#dcd6c8;
-    --gold:#a9842c;
-    --gold-soft:#cfa75c;
-    --green:#1f3d2e;
+    --ink:#1c1c1a;
+    --ink-soft:#5c5a52;
+    --paper:#f7f5f0;
+    --panel:#ffffff;
+    --line:#e6e2d8;
+    --brick:#9c3a26;
+    --brick-dark:#7e2e1d;
+    --charcoal:#1c1c1a;
+    --footer-bg:#1c1c1a;
   }
   *{box-sizing:border-box;}
-  html{scroll-behavior:smooth;}
+  html,body{height:100%;}
   body{
     margin:0;
     background:var(--paper);
     color:var(--ink);
-    font-family:'Source Sans 3','Segoe UI',system-ui,sans-serif;
+    font-family:'Helvetica Neue',Arial,system-ui,sans-serif;
     -webkit-font-smoothing:antialiased;
-  }
-  @font-face{font-family:'fallback-serif';src:local('Georgia');}
-  h1,h2,.serif{
-    font-family:'Source Serif 4',Georgia,'Times New Roman',serif;
-  }
-
-  /* Header */
-  header{
-    border-bottom:1px solid var(--line);
-    padding:48px 32px 36px;
-    max-width:920px;
-    margin:0 auto;
-  }
-  .firm{
     display:flex;
-    align-items:baseline;
-    justify-content:space-between;
-    gap:24px;
-    flex-wrap:wrap;
-  }
-  .firm-name{
-    font-size:14px;
-    letter-spacing:0.14em;
-    text-transform:uppercase;
-    color:var(--ink-soft);
-    font-weight:600;
-  }
-  .firm-tag{
-    font-size:12px;
-    letter-spacing:0.08em;
-    color:#8b8470;
-  }
-  h1{
-    margin:22px 0 10px;
-    font-size:clamp(28px,4vw,40px);
-    font-weight:600;
-    line-height:1.15;
-    color:var(--ink);
-  }
-  .subhead{
-    font-size:15.5px;
-    color:var(--ink-soft);
-    line-height:1.6;
-    max-width:60ch;
-  }
-  .updated-note{
-    margin-top:18px;
-    font-size:12.5px;
-    color:#8b8470;
-    border-left:2px solid var(--gold-soft);
-    padding-left:10px;
+    flex-direction:column;
+    min-height:100vh;
   }
 
-  /* Section */
-  main{
-    max-width:920px;
-    margin:0 auto;
-    padding:44px 32px 80px;
-  }
-  .section-label{
-    font-size:12px;
-    letter-spacing:0.14em;
-    text-transform:uppercase;
-    color:#8b8470;
-    margin:0 0 18px;
+  .topbar{
+    background:var(--paper);
+    border-bottom:1px solid var(--line);
+    padding:13px 36px;
     display:flex;
     align-items:center;
+    justify-content:space-between;
+    flex-wrap:wrap;
     gap:10px;
   }
-  .section-label::after{
-    content:"";
-    flex:1;
-    height:1px;
-    background:var(--line);
+  .brand{
+    display:flex;
+    align-items:center;
+    gap:11px;
+  }
+  .brand-mark{
+    width:24px;
+    height:30px;
+    flex-shrink:0;
+  }
+  .brand-name{
+    font-family:'Times New Roman',Georgia,serif;
+    font-size:19px;
+    font-weight:400;
+    letter-spacing:0.08em;
+    text-transform:uppercase;
+    color:var(--charcoal);
+  }
+  .brand-reg{
+    font-size:11.5px;
+    color:var(--ink-soft);
+    letter-spacing:0.02em;
   }
 
-  /* Cards */
-  .grid{
-    display:grid;
-    gap:1px;
-    background:var(--line);
-    border:1px solid var(--line);
-    margin-bottom:52px;
+  .page-head{
+    padding:18px 36px 14px;
+    max-width:1100px;
+    margin:0 auto;
+    width:100%;
   }
-  .card{
-    background:var(--paper);
-    padding:22px 24px;
-    display:grid;
-    grid-template-columns:1fr auto;
-    gap:16px;
-    align-items:center;
-    text-decoration:none;
-    color:inherit;
-    transition:background 0.15s ease;
-    position:relative;
-  }
-  .card:hover{ background:var(--paper-dim); }
-  .card:hover .go{ transform:translateX(2px); border-color:var(--gold); }
-  .card-main{ min-width:0; }
-  .card-label{
+  .eyebrow{
     font-size:11px;
-    letter-spacing:0.1em;
+    letter-spacing:0.14em;
     text-transform:uppercase;
-    color:var(--gold);
-    font-weight:600;
-    margin-bottom:6px;
+    color:var(--brick);
+    font-weight:700;
+    margin-bottom:5px;
   }
-  .card-title{
-    font-family:'Source Serif 4',Georgia,serif;
-    font-size:19px;
-    font-weight:600;
-    color:var(--ink);
-    margin-bottom:4px;
+  h1{
+    margin:0 0 6px;
+    font-size:clamp(21px,2.6vw,27px);
+    font-weight:700;
+    line-height:1.18;
+    color:var(--charcoal);
+    letter-spacing:-0.01em;
   }
-  .card-desc{
-    font-size:13.5px;
+  .subhead{
+    font-size:13px;
     color:var(--ink-soft);
     line-height:1.5;
+    max-width:68ch;
+    margin:0;
+  }
+
+  main{
+    flex:1;
+    max-width:1100px;
+    margin:0 auto;
+    width:100%;
+    padding:36px 36px 16px;
+    display:flex;
+    flex-direction:column;
+    justify-content:flex-start;
+    gap:14px;
+  }
+  .section-label{
+    font-size:10.5px;
+    letter-spacing:0.13em;
+    text-transform:uppercase;
+    color:var(--ink-soft);
+    font-weight:700;
+    margin:0 0 7px;
+  }
+  .theses-section{
+    margin-top:14px;
+    padding-top:24px;
+    border-top:1px solid var(--line);
+  }
+  .grid{
+    display:flex;
+    flex-wrap:wrap;
+    gap:14px;
+  }
+  .grid .card{
+    flex:1 1 calc(50% - 7px);
+    min-width:260px;
+  }
+
+  .card{
+    background:var(--panel);
+    border:1px solid var(--line);
+    border-radius:12px;
+    padding:18px 20px;
+    text-decoration:none;
+    color:inherit;
+    display:flex;
+    align-items:center;
+    gap:14px;
+    box-shadow:0 1px 3px rgba(28,28,26,0.04), 0 1px 2px rgba(28,28,26,0.03);
+    transition:border-color 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease;
+  }
+  .card:hover{
+    border-color:var(--brick);
+    box-shadow:0 8px 20px rgba(28,28,26,0.08);
+    transform:translateY(-1px);
+  }
+  .card-main{ min-width:0; flex:1; }
+  .card-label{
+    font-size:10px;
+    letter-spacing:0.09em;
+    text-transform:uppercase;
+    color:var(--brick);
+    font-weight:600;
+    margin-bottom:5px;
+  }
+  .card-title{
+    font-size:16.5px;
+    font-weight:700;
+    color:var(--charcoal);
+    line-height:1.25;
+    letter-spacing:-0.01em;
   }
   .go{
-    width:34px;
-    height:34px;
+    width:30px;
+    height:30px;
     border-radius:50%;
-    border:1px solid var(--line);
+    border:1.5px solid var(--line);
+    color:var(--brick);
     display:flex;
     align-items:center;
     justify-content:center;
     flex-shrink:0;
-    transition:all 0.15s ease;
+    font-size:13px;
+    transition:all 0.2s ease;
+  }
+  .card:hover .go{ background:var(--brick); border-color:var(--brick); color:#fff; }
+
+  .updated-note{
+    font-size:11px;
     color:var(--ink-soft);
-    font-size:15px;
-    line-height:1;
+    border-left:2px solid var(--brick);
+    padding-left:9px;
+    margin:8px 0 0;
   }
 
   footer{
-    max-width:920px;
-    margin:0 auto;
-    padding:0 32px 60px;
-    font-size:12px;
-    color:#8b8470;
-    line-height:1.7;
-    border-top:1px solid var(--line);
-    padding-top:24px;
+    background:var(--charcoal);
+    color:#bdbdbd;
+    padding:14px 36px;
   }
-  footer p{ margin:0 0 8px; max-width:65ch; }
+  .footer-inner{
+    max-width:1100px;
+    margin:0 auto;
+  }
+  footer p{
+    margin:0;
+    font-size:10.5px;
+    line-height:1.55;
+    color:#a8a8a8;
+  }
+  .footer-firm{
+    color:#e8e8e8;
+    font-size:11px;
+    font-weight:600;
+    margin-bottom:6px;
+  }
 
-  @media (max-width:520px){
-    header{ padding:36px 20px 28px; }
-    main{ padding:32px 20px 60px; }
-    footer{ padding:0 20px 48px; }
-    .card{ grid-template-columns:1fr; }
-    .go{ display:none; }
+  @media (max-width:680px){
+    .topbar{ padding:14px 20px; }
+    .page-head{ padding:20px 20px 14px; }
+    main{ padding:6px 20px 16px; gap:14px; }
+    .grid .card{ flex:1 1 100%; }
+    footer{ padding:18px 20px; }
   }
 </style>
 </head>
 <body>
 
-<header>
-  <div class="firm">
-    <span class="firm-name">Courser Park Advisors LLP</span>
-    <span class="firm-tag">SEBI Reg. INP000008303</span>
+<div class="topbar">
+  <div class="brand">
+    <span class="brand-name">Courser Park Advisors</span>
   </div>
-  <h1>Investor Materials</h1>
-  <p class="subhead">Strategy overview, current portfolio theses, and the latest performance report for the GARP equity strategy.</p>
-  <p class="updated-note">This page is updated in place — bookmark it rather than the individual files below.</p>
-</header>
+  <span class="brand-reg">SEBI Reg. INP000008303</span>
+</div>
+
+<div class="page-head">
+  <p class="eyebrow">Investor Materials</p>
+  <h1>Strategy &amp; Theses</h1>
+  <p class="subhead">Strategy | Theses | Newsletter</p>
+</div>
 
 <main>
 
-  <p class="section-label">Strategy &amp; Performance</p>
-  <div class="grid">
-    <a class="card" href="pdfs/CPA_June_2026_Deck.pdf" target="_blank" rel="noopener">
-      <div class="card-main">
-        <div class="card-label">Strategy Overview</div>
-        <div class="card-title">GARP Strategy Deck — June 2026</div>
-        <div class="card-desc">Investment philosophy, process, and portfolio construction for the Growth at a Reasonable Price strategy.</div>
-      </div>
-      <span class="go">↗</span>
-    </a>
-    <a class="card" href="pdfs/Quarterly_Report_March_2026.pdf" target="_blank" rel="noopener">
-      <div class="card-main">
-        <div class="card-label">Performance Report</div>
-        <div class="card-title">Quarterly Report — March 2026</div>
-        <div class="card-desc">Portfolio performance, attribution, and commentary for the quarter ended March 2026.</div>
-      </div>
-      <span class="go">↗</span>
-    </a>
+  <div class="section strategy-section">
+    <p class="section-label">Strategy &amp; Performance</p>
+    <div class="grid">
+      <a class="card" href="pdfs/CPA_June_2026_Deck.pdf" target="_blank" rel="noopener">
+        <div class="card-main">
+          <div class="card-label">Strategy Overview</div>
+          <div class="card-title">GARP Strategy Deck — June 2026</div>
+        </div>
+        <span class="go">↗</span>
+      </a>
+      <a class="card" href="pdfs/Quarterly_Report_March_2026.pdf" target="_blank" rel="noopener">
+        <div class="card-main">
+          <div class="card-label">Performance Report</div>
+          <div class="card-title">Quarterly Report — March 2026</div>
+        </div>
+        <span class="go">↗</span>
+      </a>
+    </div>
   </div>
 
-  <p class="section-label">Portfolio Theses</p>
-  <div class="grid">
-    <a class="card" href="pdfs/Titan_Deck.pdf" target="_blank" rel="noopener">
-      <div class="card-main">
-        <div class="card-label">Consumer / Jewellery</div>
-        <div class="card-title">Titan Company</div>
-        <div class="card-desc">Investment thesis and business overview.</div>
-      </div>
-      <span class="go">↗</span>
-    </a>
-    <a class="card" href="pdfs/TVS_Motor_Deck.pdf" target="_blank" rel="noopener">
-      <div class="card-main">
-        <div class="card-label">Automobiles</div>
-        <div class="card-title">TVS Motor Company</div>
-        <div class="card-desc">Investment thesis and business overview.</div>
-      </div>
-      <span class="go">↗</span>
-    </a>
-    <a class="card" href="pdfs/Navin_Fluorine_Deck.pdf" target="_blank" rel="noopener">
-      <div class="card-main">
-        <div class="card-label">Specialty Chemicals</div>
-        <div class="card-title">Navin Fluorine International</div>
-        <div class="card-desc">Investment thesis and business overview.</div>
-      </div>
-      <span class="go">↗</span>
-    </a>
-    <a class="card" href="pdfs/Acutaas_Deck.pdf" target="_blank" rel="noopener">
-      <div class="card-main">
-        <div class="card-label">Specialty Chemicals</div>
-        <div class="card-title">Acutaas Chemicals</div>
-        <div class="card-desc">Investment thesis and business overview.</div>
-      </div>
-      <span class="go">↗</span>
-    </a>
+  <div class="section theses-section">
+    <p class="section-label">Portfolio Theses</p>
+    <div class="grid">
+      <a class="card" href="pdfs/Titan_Deck.pdf" target="_blank" rel="noopener">
+        <div class="card-main">
+          <div class="card-label">Consumer / Jewellery</div>
+          <div class="card-title">Titan Company</div>
+        </div>
+        <span class="go">↗</span>
+      </a>
+      <a class="card" href="pdfs/TVS_Motor_Deck.pdf" target="_blank" rel="noopener">
+        <div class="card-main">
+          <div class="card-label">Automobiles</div>
+          <div class="card-title">TVS Motor Company</div>
+        </div>
+        <span class="go">↗</span>
+      </a>
+      <a class="card" href="pdfs/Navin_Fluorine_Deck.pdf" target="_blank" rel="noopener">
+        <div class="card-main">
+          <div class="card-label">Specialty Chemicals</div>
+          <div class="card-title">Navin Fluorine International</div>
+        </div>
+        <span class="go">↗</span>
+      </a>
+      <a class="card" href="pdfs/Acutaas_Deck.pdf" target="_blank" rel="noopener">
+        <div class="card-main">
+          <div class="card-label">Specialty Chemicals</div>
+          <div class="card-title">Acutaas Chemicals</div>
+        </div>
+        <span class="go">↗</span>
+      </a>
+    </div>
   </div>
+
+  <p class="updated-note">This page is updated in place — bookmark it rather than the individual files below.</p>
 
 </main>
 
 <footer>
-  <p>This material is shared on a confidential basis for the sole use of the intended recipient and may not be redistributed. It does not constitute investment advice or an offer to invest. Past performance is not indicative of future results.</p>
-  <p>Courser Park Advisors LLP (operating as RW Investment Advisors / RW Advisors) is registered with SEBI as a Portfolio Management Services provider, registration no. INP000008303.</p>
+  <div class="footer-inner">
+    <p class="footer-firm">Courser Park Advisors LLP</p>
+    <p>Investment in securities market are subject to market risks. Read all the related documents carefully before investing. Registration granted by SEBI, membership of BASL (in case of IAs) and certification from NISM in no way guarantee performance of the intermediary or provide any assurance of returns to investors. Past performance is not indicative of future returns and investor returns may vary depending on the timing of investments and other conditions. Any performance-related information provided herein has not been verified by SEBI.</p>
+  </div>
 </footer>
 
 </body>
